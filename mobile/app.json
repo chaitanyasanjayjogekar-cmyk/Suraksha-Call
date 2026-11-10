@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Suraksha Call",
+    "slug": "suraksha-call",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2563EB"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.chaitanya.surakshaCall",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Suraksha Call needs microphone access to record and analyze suspicious calls.",
+        "NSSpeechRecognitionUsageDescription": "Used for voice analysis."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2563EB"
+      },
+      "package": "com.chaitanya.surakshaCall",
+      "permissions": [
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "SEND_SMS",
+        "VIBRATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-av",
+      [
+        "expo-document-picker",
+        { "iCloudContainerEnvironment": "Production" }
+      ]
+    ],
+    "extra": {
+      "eas": { "projectId": "suraksha-call-project-id" }
+    }
+  }
+}
+
